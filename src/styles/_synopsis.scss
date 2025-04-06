@@ -1,0 +1,33 @@
+@use 'variaveis';
+
+.synopsis{
+    display: block;
+    position: relative;
+    color: variaveis.$corTxtSynopsis;
+    text-align: center;
+
+    &__image{
+        width: 100%;
+        box-shadow: 0px -20px 5px #000000;
+        @media (max-width: 768px){
+            box-shadow: none;
+        }
+    }
+    &__text{
+        position: absolute;
+        top: 0;
+        right: 50%;
+        height: 100%;
+        width: calc(50% - 5.6vw);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media (max-width: 1050px){
+            width: 100%;
+            right: 0;
+            padding: 5.6vw;
+            background-color: #000000d0;
+        }
+    }
+}

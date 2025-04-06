@@ -1,0 +1,71 @@
+@use 'variaveis';
+
+.header{
+    padding: 0 20px;
+    border-bottom: 1px inset variaveis.$corBordaHeader;
+    padding: 0 5.6vw;
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: flex-end;
+        padding-top: 10px;
+
+        @media(max-width:620px){
+            flex-direction: column;
+        }
+    }
+
+    &__logo:first-child{
+        @media (max-width: 1024px){
+            display: none;
+        }
+    }
+
+    &__logo{
+        max-width: 280px;
+        padding: 0;
+
+        &__item{
+            width: 100%;
+        }
+    }
+
+    &__links{
+        display: flex;
+        
+        @media(max-width:620px){
+            margin: 20px;
+        }
+        &__item:last-child{
+            margin-left: 16px;
+        }
+    }
+
+    &__button{
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 12px 16px;
+        border: 1px solid variaveis.$corBorderButton;
+        border-radius: 6px;
+        font-size: 18px;
+
+        &--rent{
+            background-color: variaveis.$corFundoBtnRent;
+            color: variaveis.$corLetraBtnRent;
+        }
+
+        &--buy{
+            background-color: variaveis.$corFundoBtnBuy;
+            color: variaveis.$corLetraBtnBuy;
+        }
+
+        &:hover{
+            background-color: variaveis.$corFundoBtnHover;
+            color: variaveis.$corLetraBtnHover;
+            border: 1px solid variaveis.$corBorderBtnHover;
+        }
+
+    }
+}

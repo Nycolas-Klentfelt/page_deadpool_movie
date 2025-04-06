@@ -1,0 +1,19 @@
+@use 'variaveis';
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid variaveis.$corBorderFooter;
+    margin-top: -5px;
+    background-color: variaveis.$corFundoFooter;
+    @media (max-width: 1050px){
+        margin-top: 0;
+    }
+    &__content{
+        padding: 20px;
+        &__item{
+            max-width: 200px;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+@use 'variaveis';
+
+.hero{
+    padding: 5.6vw;
+    background-image: url(../images/deadpool-hero1.jpg);
+    text-align: center;
+    background-size: cover;
+
+    &__content{
+        font-size: 26px;
+        color: variaveis.$corTxtHero;
+        max-width: 900px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+
+        &__trailer{
+            width: 800px;
+            height: 600px;
+            @media (max-width:830px){
+                width: 600px;
+                height: 400px;
+            }
+            @media (max-width:630px){
+                width: 400px;
+                height: 300px;
+            }
+            @media (max-width:430px){
+                width: 350px;
+                height: 250px;
+            }
+        }
+    }
+}
